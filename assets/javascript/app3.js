@@ -3,8 +3,29 @@ console.log('hello');
 // once the option was chosen then check against the aswer
 // if value from form == q1Answer -> alert('that is correct!')
 
+var trivia = [{
+        question: "what color is the sun?",
+        answers: ["pink", "green", "yellow", "black"],
+        correct: ["yellow"]
+    },
+    {
+        question: "what color is the moon?",
+        answers: ["pink", "white", "orange", "black"],
+        correct: ["white"]
+    }
+]
 
-var q1Answer = "yellow"
+for (i=0; i< trivia.length; i++)
+    var myAnswer = prompt(trivia[i].question)
+    
+    if (myAnswer === trivia[i].choices[trivia[i].correct]) {
+    alert("You got it right!")
+    }
+
+    // <div id="questionDiv"></div>
+    // <div id="answersDiv"></div>
+
+
 var questionsRight = 0
 var questionsWrong = 0
 var time = 10
